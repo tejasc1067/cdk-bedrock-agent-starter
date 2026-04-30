@@ -1,0 +1,46 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "DateTime API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/get-datetime": {
+      "get": {
+        "summary": "Returns the current date and time in the configured timezone",
+        "description": "Returns the current date, time, and ISO datetime string in the configured timezone",
+        "operationId": "getDateTime",
+        "responses": {
+          "200": {
+            "description": "Current date and time",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string",
+                      "description": "Current date in YYYY-MM-DD format"
+                    },
+                    "time": {
+                      "type": "string",
+                      "description": "Current time in HH:MM:SS format"
+                    },
+                    "timezone": {
+                      "type": "string",
+                      "description": "Timezone label and UTC offset"
+                    },
+                    "datetime_iso": {
+                      "type": "string",
+                      "description": "Full ISO 8601 datetime string with UTC offset"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

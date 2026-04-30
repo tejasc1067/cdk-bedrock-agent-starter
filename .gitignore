@@ -1,0 +1,28 @@
+# CDK
+cdk.out/
+.cdk.staging/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# AWS credentials — never commit these
+.env*
+*.pem
+credentials
+
+# IDE
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Logs and build artifacts
+*.log
+*.zip
+.pytest_cache/
